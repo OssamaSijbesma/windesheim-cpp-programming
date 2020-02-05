@@ -2,10 +2,17 @@
 //
 
 #include <iostream>
+#include "Sum.h"
+#include "Calculator.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Sum sum;
+    Calculator calc;
+    std::cout << "Sum of 2 + 3 = " << sum.sum(2,3);
+    std::cout << "Total of the power off " << calc.power(4, 6);
+
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
