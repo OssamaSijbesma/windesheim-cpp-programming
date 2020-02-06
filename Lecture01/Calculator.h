@@ -5,9 +5,13 @@ class Calculator
 public:
 	Calculator();
 	~Calculator();
-	int sum(int a, int b) const;
-	int power(int a, int b) const;
-	int getArrayIndex(int values[], int value);
+	int Sum(int a, int b) const;
+	bool IsEven(int a) const;
+	int Power(int a, int b) const;
+	bool IsPrime(int a) const;
+	int GCD(int a, int b) const;
+	int LCM(int a, int b) const;
+
 private:
 
 };

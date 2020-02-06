@@ -1,4 +1,5 @@
 #include "Calculator.h"
+#include <iostream>
 
 Calculator::Calculator()
 {
@@ -8,28 +9,61 @@ Calculator::~Calculator()
 {
 }
 
-int Calculator::sum(int a, int b) const
+int Calculator::Sum(int a, int b) const
 {
 	return a + b;
 }
 
-int Calculator::power(int base, int powerRaised) const
+bool Calculator::IsEven(int a) const
+{
+	if (a % 2 == 0)
+	{
+		std::cout << a << " even" << std::endl;
+		return true;
+	}
+	std::cout << a << " uneven" << std::endl;
+	return false;
+}
+
+int Calculator::Power(int base, int powerRaised) const
 {
 	if (powerRaised != 0)
-		return (base * power(base, powerRaised - 1));
+		return (base * Power(base, powerRaised - 1));
 	else
 		return 1;
 }
 
-int Calculator::getArrayIndex(int values[], int value)
+bool Calculator::IsPrime(int a) const
 {
-	int i;
-	for (int item : values)
-	{
-		i++;
-		if (item == value)
-			return i;
+	if (a <= 3)
+		return a > 1;
+	else if (a % 2 == 0 || a % 3 == 0)
+		return false;
 
+	int i = 5;
+
+	while (i * i < a)
+	{
+		if (a % i == 0 || a % i+2 == 0)
+			return false;
+		i += 6;
 	}
-	return -1;
+	
+	return true;
+}
+
+int Calculator::GCD(int a, int b) const
+{
+	while (a != b) 
+		if (a > b)
+			a = a - b;
+		else
+			b = b - a;
+
+	return a;
+}
+
+int Calculator::LCM(int a, int b) const
+{
+	return a * b / GCD(a,b);
 }

@@ -2,15 +2,38 @@
 //
 
 #include <iostream>
-#include "Sum.h"
 #include "Calculator.h"
+#include "Database.h"
 
 int main()
 {
-    Sum sum;
+    Database data;
     Calculator calc;
-    std::cout << "Sum of 2 + 3 = " << sum.sum(2,3);
-    std::cout << "Total of the power off " << calc.power(4, 6);
+
+    // Exercise 1
+    std::cout << "Sum of 2 + 3 = " << calc.Sum(2,3) << std::endl;
+
+    // Exercise 2
+    calc.IsEven(3);
+
+    // Exercise 3
+    std::cout << "Total of the power off " << calc.Power(4, 6) << std::endl;
+
+    // Exercise 4
+    std::cout << calc.IsPrime(56) << std::endl;
+
+    // Exercise 5
+    std::cout << data.getArrayIndex(2) << std::endl;
+
+    // Exercise 6
+    int items[10] = { 0,4,6,3,4,2,6,7,8,7 };
+    data.BubbleSort(items, 10);
+
+    // Exercise 7
+    std::cout << calc.GCD(21, 12) << std::endl;
+
+    // Exercise 8
+    std::cout << calc.LCM(3, 2) << std::endl;
 
     return 0;
 }

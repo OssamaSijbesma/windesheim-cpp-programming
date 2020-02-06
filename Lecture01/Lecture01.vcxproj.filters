@@ -18,18 +18,18 @@
     <ClCompile Include="Lecture01.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Sum.cpp">
+    <ClCompile Include="Calculator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Calculator.cpp">
+    <ClCompile Include="Database.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Sum.h">
+    <ClInclude Include="Calculator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Calculator.h">
+    <ClInclude Include="Database.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
