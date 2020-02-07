@@ -25,7 +25,6 @@ void Database::BubbleSort(int* numbers, int size)
 {
 	int i, j;
 	for (i = 0; i < size - 1; i++)
-		// Last i elements are already in place  
 		for (j = 0; j < size - i - 1; j++)
 			if (numbers[j] > numbers[j + 1])
 				swap(&numbers[j], &numbers[j + 1]);
