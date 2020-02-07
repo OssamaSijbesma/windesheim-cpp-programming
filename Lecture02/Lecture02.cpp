@@ -2,10 +2,13 @@
 //
 
 #include <iostream>
+#include "PlayerState.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    PlayerState player;
+    player.StreamOut();
+    player.StreamIn();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
