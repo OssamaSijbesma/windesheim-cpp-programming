@@ -148,9 +148,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Lecture02.cpp" />
+    <ClCompile Include="Math.cpp" />
     <ClCompile Include="PlayerState.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Math.h" />
     <ClInclude Include="PlayerState.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
