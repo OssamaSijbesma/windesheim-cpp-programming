@@ -3,21 +3,63 @@
 
 #include <iostream>
 #include "PlayerState.h"
+#include "PlayerStateStruct.cpp"
+#include "Util.h"
 
 int main()
 {
+    Util util;
     PlayerState player;
+
+    // Exercise 2
+    int i = 12;
+    int j = 36;
+    std::cout << "Simplify a Fraction " << i << "/" << j << " : ";
+    util.Fraction(&i, &j);
+    std::cout << i << "/" << j << std::endl;
+
+    // Exercise 3
+    util.NameArray();
+
+    // Exercise 4
+    char str[] = "madam";
+    std::cout << "palindrome? " << util.IsPalindrome(str) << std::endl;
+
+    // Exercise 5
     player.StreamOut();
     player.StreamIn();
+
+    // Exercise 6 & 7
+    PlayerStateStruct playerstates[3];
+
+    strcpy_s(playerstates[0].name, sizeof(playerstates[0].name), "Homer");
+    playerstates[0].level = 1;
+    playerstates[0].health = 20;
+    playerstates[0].experience = 0;
+
+    strcpy_s(playerstates[1].name, sizeof(playerstates[1].name), "Jan");
+    playerstates[1].level = 2;
+    playerstates[1].health = 13;
+    playerstates[1].experience = 12;
+
+    strcpy_s(playerstates[2].name, sizeof(playerstates[2].name), "Nis");
+    playerstates[2].level = 3;
+    playerstates[2].health = 123;
+    playerstates[2].experience = 1222;
+
+    for (int i = 3 - 1; i >= 0; i--)
+    {
+        PrintPlayerState(playerstates[i]);
+    }
+
+    // Exercise 8
+    SavePlayerState(playerstates, 3);
+
+    // Exercise 9
+
+
+
+
+
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
