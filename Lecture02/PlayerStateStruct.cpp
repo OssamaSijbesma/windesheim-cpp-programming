@@ -2,6 +2,7 @@
 #include <fstream>
 #include <iostream>
 
+using namespace std;
 
 struct PlayerStateStruct {
     char name[20];
@@ -26,10 +27,22 @@ inline void PrintPlayerState(PlayerStateStruct player)
 
 inline void SavePlayerState(PlayerStateStruct* players, int length)
 {
+
     FILE* file;
-    fopen_s(&file, "C:/Users/Mars/Desktop/game.dat", "wb");
-    fwrite((PlayerStateStruct*)&players, sizeof(players), length, file);
+    fopen_s(&file, "C:/Users/Apollo/Desktop/game.dat", "wb");
+    fwrite((PlayerStateStruct*)&players, sizeof(PlayerStateStruct), length, file);
     fclose(file);
+ 
+
+    /*
+        int i;
+    ofstream file;
+    file.open("C:/Users/Apollo/Desktop/game.dat", ios::binary);
+    for (i = 0; i < length; i++)
+        file.write((char*)&players[i], sizeof(PlayerStateStruct));
+    file.close();
+    */
+
 }
 
 inline void ExportToTXT()
