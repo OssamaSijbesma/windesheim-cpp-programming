@@ -1,6 +1,8 @@
 #pragma once
 #include <fstream>
 #include <iostream>
+#define filePath "C:/Users/Soyuz/Desktop/gamedata.dat"
+#define filePathTXT "C:/Users/Soyuz/Desktop/gamedata.txt"
 
 using namespace std;
 
@@ -15,7 +17,7 @@ struct PlayerStateStruct {
 
 void PrintPlayerState(PlayerStateStruct player);
 void SavePlayerState(PlayerStateStruct* players, int length);
-void ExportToTXT();
+void ExportToTXT(int length);
 
 inline void PrintPlayerState(PlayerStateStruct player)
 {
@@ -27,32 +29,68 @@ inline void PrintPlayerState(PlayerStateStruct player)
 
 inline void SavePlayerState(PlayerStateStruct* players, int length)
 {
-
+    /*
     FILE* file;
-    fopen_s(&file, "C:/Users/Apollo/Desktop/game.dat", "wb");
+    fopen_s(&file, filePath, "wb");
     fwrite((PlayerStateStruct*)&players, sizeof(PlayerStateStruct), length, file);
     fclose(file);
- 
+  */
 
-    /*
-        int i;
     ofstream file;
-    file.open("C:/Users/Apollo/Desktop/game.dat", ios::binary);
-    for (i = 0; i < length; i++)
-        file.write((char*)&players[i], sizeof(PlayerStateStruct));
-    file.close();
-    */
+    file.open(filePath, ios::binary);
 
+    if (file.is_open())
+    {
+        for (int i = 0; i < length; i++)
+            file.write((char*) &players[i], sizeof(PlayerStateStruct));
+
+        file.close();
+    }
+    else
+        cout << "Oh no" << std::endl;   
 }
 
-inline void ExportToTXT()
+inline void ExportToTXT(int length)
 {
-    /*
-        FILE* File;
-    fopen_s(&File, "C:/Users/Mars/Desktop/game.dat", "wb");
-    fread((char*)&players, sizeof(players), 3, File);
-    fclose(File);
-    PrintPlayerState()
-    */
 
+    /*
+    FILE* File;
+    fopen_s(&File, filePath, "wb");
+    fread((char*)&PlayerStateStruct, sizeof(PlayerStateStruct), 3, File);
+    fclose(File);
+    PrintPlayerState();
+    */
+    PlayerStateStruct players[10];
+
+    ifstream inputFile;
+    ofstream outputFile;
+
+    inputFile.open(filePath, ios::binary);
+
+    if (inputFile.is_open())
+    {
+        for (int i = 0; i < length; i++)
+            inputFile.read((char*)&players[i], sizeof(PlayerStateStruct));
+
+        inputFile.close();
+
+        outputFile.open(filePathTXT);
+
+        if (outputFile.is_open())
+        {
+            for (int i = 0; i < length; i++)
+            {
+                outputFile << players[i].name << std::endl;
+
+                std::cout << "name: " << players[i].name << std::endl;
+
+            }
+
+            outputFile.close();
+        }
+        else
+            cout << "Oh no txt" << std::endl;
+    }
+    else
+        cout << "Oh no binary" << std::endl;
 }

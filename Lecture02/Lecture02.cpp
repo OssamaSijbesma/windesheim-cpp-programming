@@ -56,10 +56,6 @@ int main()
     SavePlayerState(playerstates, 3);
 
     // Exercise 9
-
-
-
-
-
+    ExportToTXT(3);
 }
 
