@@ -19,7 +19,7 @@ int main()
     stack.Push(3);
     stack.Push(2);
     stack.Print();
-    std::cout << stack.Size() << std::endl;
+    std::cout << stack.Sum() << std::endl;
 
    
 }

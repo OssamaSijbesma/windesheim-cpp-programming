@@ -9,23 +9,24 @@ Stack::Stack()
 
 Stack::~Stack()
 {
+	delete size;
 	delete[] data;
 }
 
 bool Stack::IsEmpty()
 {
-	return (size == 0) ? true : false; 
+	return (*size == 0) ? true : false; 
 }
 
 void Stack::Push(int x)
 {
 	data[*size] = x;
-	size++;
+	*size += 1;
 }
 
 int Stack::Pop()
 {
-	size--;
+	*size -= 1;
 	return data[*size];
 }
 
@@ -42,5 +43,10 @@ int Stack::Size()
 
 int Stack::Sum()
 {
-	return 0;
+	int sum = 0;
+
+	for (int i = 0; i < *size; i++)
+		sum += data[i];
+
+	return sum;
 }
