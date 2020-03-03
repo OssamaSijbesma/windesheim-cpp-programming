@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "Random.h"
+#include "BST.h"
 
 int main()
 {
@@ -33,6 +34,10 @@ int main()
         std::cout << o[i] << " ";
 
     std::cout << std::endl;
+
+    BST bst;
+    bst.Insert(2);
+    bst.Insert(3);
 
     
 }

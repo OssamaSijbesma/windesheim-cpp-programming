@@ -13,19 +13,43 @@ BST::~BST()
 
 void BST::Insert(int value)
 {
-	Node* node = new Node(value);
-
-	if (root == nullptr)
-		root = node;
+	if (!root) root = new Node(value);
+	else root->Insert(value);
 }
 
+int BST::Depth()
+{
+	return 0;
+}
+
+bool BST::IsPresent(int x)
+{
+	return false;
+}
+
+void BST::Travers()
+{
+}
+
+void BST::Print()
+{
+}
+
+// Constructor
 BST::Node::Node(int value)
 {
 	this->value = value;
 }
 
-void BST::Node::Insert(Node* node)
+void BST::Node::Insert(int value)
 {
-	if (value < node->value)
-		
+	if (this->value == value) this->value = value;
+	else if (this->value > value)
+		if (!this->left) this->left = new Node(value);
+		else this->left->Insert(value);
+	else if (this->value < value)
+		if (!this->right) this->right = new Node(value);
+		else this->right->Insert(value);
 }
+
+
