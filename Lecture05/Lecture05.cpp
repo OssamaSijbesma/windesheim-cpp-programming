@@ -38,8 +38,10 @@ int main()
     BST bst;
     bst.Insert(2);
     bst.Insert(3);
-
-    
+    bst.Insert(4);
+    bst.Insert(1);
+    std::cout << bst.IsPresent(5) << std::endl;
+    bst.Travers();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

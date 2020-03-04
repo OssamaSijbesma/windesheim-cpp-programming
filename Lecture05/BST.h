@@ -1,13 +1,19 @@
 #pragma once
+#include <iostream>
+
+
 class BST
 {
 	struct Node
 	{
-		Node(int value);
-		void Insert(int value);
 		int value;
 		Node* left;
 		Node* right;
+
+		Node(int value);
+		void Insert(int value);
+		int Depth();
+		void PrintInfix();
 	};
 
 public:
@@ -21,4 +27,3 @@ public:
 private:
 	Node* root;
 };
-
