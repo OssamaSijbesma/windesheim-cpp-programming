@@ -2,10 +2,42 @@
 //
 
 #include <iostream>
+#include "BitHolder.h"
+#include "Cipher.h"
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    BitHolder bitholder;
+
+    unsigned char tile = 0;
+    tile = bitholder.SetTerrain(tile, water);
+
+    tile = bitholder.SetField(tile, treasure);
+    cout << (bitholder.ContainsField(tile, treasure) ? "Treasure!" : "Nothing") << endl;
+
+    tile = bitholder.FetchTreasure(tile);
+    cout << (bitholder.ContainsField(tile, treasure) ? "Treasure!" : "Nothing") << endl;
+
+    tile = bitholder.SetField(tile, treasure);
+
+    char* story = new char[1024];
+    strcpy_s(story, 1024, "Hello this is a beutiful story about a cow and a princess.");
+    cout << story << endl;
+
+    Cipher::XOR(story, 'a');
+    cout << story << endl;
+
+    Cipher::XOR(story, 'a');
+    cout << story << endl;
+
+    Cipher::XOR(story, "blerg");
+    cout << story << endl;
+
+    Cipher::XOR(story, "blerg");
+    cout << story << endl;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

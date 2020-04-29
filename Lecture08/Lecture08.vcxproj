@@ -148,10 +148,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BitHolder.cpp" />
+    <ClCompile Include="Cipher.cpp" />
     <ClCompile Include="Lecture08.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BitHolder.h" />
+    <ClInclude Include="Cipher.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
