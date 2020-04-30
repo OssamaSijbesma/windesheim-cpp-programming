@@ -28,5 +28,6 @@ private:
 	void Insert(Node<T>* node, T x);
 	void Traverse(Node<T>* node);
 	Node<T>* Find(Node<T>* node, T x);
+	Node<T>* FindParent(Node<T>* node, T x);
 	Node<T>* FindMin(Node<T>* node);
 };

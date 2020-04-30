@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{B2AF3ADC-3734-4BBE-8017-E47A3DAD9D9D}</ProjectGuid>
+    <ProjectGuid>{CFBBDB2C-4173-448C-8479-49D78DCA9F83}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>PracticeExam</RootNamespace>
+    <RootNamespace>Lecture08answers</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -147,13 +147,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BinarySearchTree.cpp" />
-    <ClCompile Include="Fraction.cpp" />
-    <ClCompile Include="PracticeExam.cpp" />
+    <ClCompile Include="GameWorld.cpp" />
+    <ClCompile Include="Lecture08_answers.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BinarySearchTree.h" />
-    <ClInclude Include="Fraction.h" />
+    <ClInclude Include="GameWorld.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

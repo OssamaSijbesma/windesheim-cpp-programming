@@ -27,17 +27,23 @@ int main()
     cout << story << endl;
 
     Cipher::XOR(story, 'a');
+    cout << "encrypt with single char: " << endl;
     cout << story << endl;
 
     Cipher::XOR(story, 'a');
+    cout << "decrypt with single char: " << endl;
     cout << story << endl;
 
     Cipher::XOR(story, "blerg");
+    cout << "encrypt with a sentence: " << endl;
     cout << story << endl;
 
     Cipher::XOR(story, "blerg");
-    cout << story << endl;
+    cout << "decrypt with a sentence: " << endl;
+    cout  << story << endl;
 
+    Cipher::WriteFileXOR(story, "awh");
+    Cipher::ReadFileXOR("awh");
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
