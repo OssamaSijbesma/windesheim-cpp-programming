@@ -1,8 +1,8 @@
 #pragma once
 #include <fstream>
 #include <iostream>
-#define filePath "C:/Users/Soyuz/Desktop/gamedata.dat"
-#define filePathTXT "C:/Users/Soyuz/Desktop/gamedata.txt"
+#define filePath "C:/Users/Mars/Desktop/gamedata.dat"
+#define filePathTXT "C:/Users/Mars/Desktop/gamedata.txt"
 
 using namespace std;
 
@@ -12,8 +12,6 @@ struct PlayerStateStruct {
     double health;
     int experience;
 };
-
-
 
 void PrintPlayerState(PlayerStateStruct player);
 void SavePlayerState(PlayerStateStruct* players, int length);
@@ -41,7 +39,7 @@ inline void SavePlayerState(PlayerStateStruct* players, int length)
 
     if (file.is_open())
     {
-        for (int i = 0; i < length; i++)
+        for (int i = 0; i < sizeof(players) / sizeof(PlayerStateStruct); i++)
             file.write((char*) &players[i], sizeof(PlayerStateStruct));
 
         file.close();

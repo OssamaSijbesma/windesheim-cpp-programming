@@ -8,7 +8,7 @@ Util::~Util()
 {
 }
 
-void Util::Fraction(int* numerator, int* denominator) const
+void Util::SimplifyFraction(int* numerator, int* denominator) const
 {
 	int gcd = GCD(*numerator, *denominator);
 	*numerator /= gcd;

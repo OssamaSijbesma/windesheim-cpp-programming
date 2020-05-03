@@ -6,7 +6,7 @@ class Util
 public:
 	Util();
 	~Util();
-	void Fraction(int* numerator, int* denominator) const;
+	void SimplifyFraction(int* numerator, int* denominator) const;
 	int GCD(int a, int b) const;
 	void NameArray() const;
 	bool IsPalindrome(char str[]) const;

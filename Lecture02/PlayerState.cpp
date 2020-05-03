@@ -1,6 +1,6 @@
 #include "PlayerState.h"
 
-#define filename "C:/Users/Soyuz/Desktop/PlayerData.txt"
+#define filename "C:/Users/Mars/Desktop/PlayerData.txt"
 
 PlayerState::PlayerState()
 {
@@ -39,10 +39,10 @@ void PlayerState::StreamIn()
 	if (inputFile.is_open())
 	{
 		while(getline(inputFile,line))
-			cout << line << std::endl;
+			cout << line << endl;
 
 		inputFile.close();
 	}
 	else
-		cout << "Oh no" << std::endl;
+		cout << "Oh no" << endl;
 }
