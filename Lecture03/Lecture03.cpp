@@ -12,6 +12,11 @@ int* ex2(int n)
 
     return p;
 }
+void ex2(int* arr, int n) 
+{
+    for (int i = 0; i < n; i++)
+        arr[i] = i+1;
+}
 
 int binomialCoeff(int n, int k)
 {
@@ -76,9 +81,22 @@ int main()
     for (int i = 0; i < 6; i++)
         std::cout << o[i] << std::endl;
 
+    int* iar = new int[6];
+    ex2(iar, 6);
+
+    for (int i = 0; i < 6; i++)
+        std::cout << iar[i] << std::endl;
+
     // Exercise 3
     int** pascal = ex3(5);
+    std::cout << "Pascals triangle: " << std::endl;
 
-    std::cout << "eeee " << pascal[4][2] << std::endl;
-
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < i+1; j++)
+        {
+            std::cout << pascal[i][j];
+        }
+        std::cout << std::endl;
+    }
 }
