@@ -5,46 +5,39 @@
 #include "Calculator.h"
 #include "Database.h"
 
+using namespace std;
+
 int main()
 {
     Database data;
     Calculator calc;
 
     // Exercise 1
-    std::cout << "Sum of 2 + 3 = " << calc.Sum(2,3) << std::endl;
+    cout << "Sum of 2 + 3 = " << calc.Sum(2,3) << endl;
 
     // Exercise 2
-    calc.IsEven(3);
+    cout << (calc.IsEven(3) ? "3 is even" : "3 is uneven") << endl;
+    cout << (calc.IsEven(6) ? "6 is even" : "6 is uneven") << endl;
 
     // Exercise 3
-    std::cout << "Total of the power off " << calc.Power(4, 6) << std::endl;
+    cout << "Total of the power of " << calc.Power(4, 6) << endl;
 
     // Exercise 4
-    std::cout << calc.IsPrime(56) << std::endl;
+    cout << (calc.IsPrime(56) ? "56 is a prime" : "56 is not a prime") << endl;
+    cout << (calc.IsPrime(23) ? "23 is a prime" : "23 is not a prime") << endl;
 
     // Exercise 5
-    std::cout << data.getArrayIndex(2) << std::endl;
+    cout << data.getArrayIndex(2) << endl;
 
     // Exercise 6
     int items[10] = { 0,4,6,3,4,2,6,7,8,7 };
     data.BubbleSort(items, 10);
 
     // Exercise 7
-    std::cout << calc.GCD(21, 12) << std::endl;
+    cout << "The greatest common divisor of 21 and 12 is: " << calc.GCD(21, 12) << endl;
 
     // Exercise 8
-    std::cout << calc.LCM(3, 2) << std::endl;
+    cout << "The least common multiple of 3 and 2 is: " << calc.LCM(3, 2) << endl;
 
     return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

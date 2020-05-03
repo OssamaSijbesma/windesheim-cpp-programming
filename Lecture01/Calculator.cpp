@@ -17,11 +17,8 @@ int Calculator::Sum(int a, int b) const
 bool Calculator::IsEven(int a) const
 {
 	if (a % 2 == 0)
-	{
-		std::cout << a << " even" << std::endl;
 		return true;
-	}
-	std::cout << a << " uneven" << std::endl;
+
 	return false;
 }
 
