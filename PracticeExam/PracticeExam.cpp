@@ -69,6 +69,26 @@ void append(char* body, char* tail)
     strcat_s(body, size, tail);
 }
 
+/*
+void append(char body[], const char tail[]) {
+    int body_len = strlen(body);
+    int tail_len = strlen(tail);
+    char new_body[body_len + tail_len - 1];
+    int i = 0;
+    while (body[i] != '\0') {
+        new_body[i] = body[i];
+        i++;
+    }
+    i = 0;
+    while (tail[i] != '\0') {
+        body[body_len + i] = tail[i];
+        i++;
+    }
+    new_body[body_len + tail_len - 1] = '\0';
+    *body = *new_body;
+}
+*/
+
 int main()
 {
     std::cout << "Ex1\n";

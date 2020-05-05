@@ -26,4 +26,5 @@ public:
 	void Print();
 private:
 	Node* root;
+	void PrintPrefix(Node* node, int depth);
 };

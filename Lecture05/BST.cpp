@@ -48,6 +48,22 @@ void BST::Travers()
 
 void BST::Print()
 {
+	PrintPrefix(root, 0);
+}
+
+void BST::PrintPrefix(Node* node, int depth)
+{
+	std::cout << std::endl;
+
+	for (int i = 0; i < depth; i++)
+		std::cout << "  ";
+
+	std::cout << node->value;
+
+	if (node->left != nullptr)
+		PrintPrefix(node->left, depth + 1);
+	if (node->right != nullptr)
+		PrintPrefix(node->right, depth + 1);
 }
 
 // Constructor
@@ -91,4 +107,3 @@ void BST::Node::PrintInfix()
 
 	std::cout << " ] ";
 }
-
