@@ -9,4 +9,7 @@ int main()
     std::cout <<  Fraction(2, 3).Calculate() << endl;
     std::cout << Fraction(2, 3) << endl;
 	std::cout << (Fraction(2, 3) + Fraction(1,6)) << endl;
+	std::cout << (Fraction(2, 3) - Fraction(1,6)) << endl;
+	std::cout << (Fraction(2, 3) * Fraction(1,6)) << endl;
+	std::cout << (Fraction(2, 3) / Fraction(1,6)) << endl;
 }

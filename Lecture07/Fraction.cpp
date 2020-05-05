@@ -1,5 +1,18 @@
 #include "Fraction.h"
 
+int LCM(int n1, int n2)
+{
+	int max = (n1 > n2) ? n1 : n2;
+
+	do
+	{
+		if (max % n1 == 0 && max % n2 == 0)
+			return max;
+		else
+			++max;
+	} while (true);
+}
+
 Fraction::Fraction(int numerator, int denominator)
 {
 	this->numerator = numerator;
@@ -13,19 +26,6 @@ Fraction::~Fraction()
 double Fraction::Calculate() const
 {
 	return (double) numerator / (double) denominator;
-}
-
-int Fraction::LCM(int n1, int n2)
-{
-	int max = (n1 > n2) ? n1 : n2;
-
-	do
-	{
-		if (max % n1 == 0 && max % n2 == 0)
-			return max;
-		else
-			++max;
-	} while (true);
 }
 
 Fraction& Fraction::operator=(const Fraction& f)
@@ -65,6 +65,8 @@ Fraction& Fraction::operator/=(const Fraction& f)
 	return *this;
 }
 
+
+
 ostream& operator<<(ostream& os, const Fraction& f)
 {
 	os << f.numerator << " / " << f.denominator;
@@ -74,13 +76,13 @@ ostream& operator<<(ostream& os, const Fraction& f)
 
 Fraction operator+(const Fraction& f1, const Fraction& f2)
 {
-	int lcm = Fraction::LCM(f1.denominator, f2.denominator);
+	int lcm = LCM(f1.denominator, f2.denominator);
 	return Fraction((lcm / f1.denominator * f1.numerator) + (lcm / f2.denominator * f2.numerator), lcm);
 }
 
 Fraction operator-(const Fraction& f1, const Fraction& f2)
 {
-	int lcm = Fraction::LCM(f1.denominator, f2.denominator);
+	int lcm = LCM(f1.denominator, f2.denominator);
 	return Fraction((lcm / f1.denominator * f1.numerator) - (lcm / f2.denominator * f2.numerator), lcm);
 }
 

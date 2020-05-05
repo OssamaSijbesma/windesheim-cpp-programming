@@ -3,13 +3,14 @@
 
 using namespace std;
 
+static int LCM(int n1, int n2);
+
 class Fraction
 {
 public:
 	Fraction(int numerator, int denominator);
 	~Fraction();
 	double Calculate() const;
-	static int LCM(int n1, int n2);
 
 	Fraction& operator=(const Fraction& f);
 	Fraction& operator+=(const Fraction& f);
