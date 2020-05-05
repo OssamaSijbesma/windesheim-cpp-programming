@@ -21,6 +21,7 @@ int main()
     stack.push(2.3);
     stack.push(3.4);
     stack.push(2.2);
+    stack.print();
 
     // Ex 2
     vector<int> v(10);

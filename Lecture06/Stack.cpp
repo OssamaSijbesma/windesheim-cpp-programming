@@ -19,12 +19,10 @@ Stack::~Stack()
 	}
 }
 
-
 bool Stack::is_empty()
 {
 	return (top == nullptr);
 }
-
 
 void Stack::print()
 {
@@ -37,7 +35,6 @@ void Stack::print()
 	}
 }
 
-
 void Stack::push(double value)
 {
 	Block* pointer = new Block;
@@ -45,7 +42,6 @@ void Stack::push(double value)
 	pointer->next = top;
 	top = pointer;
 }
-
 
 double Stack::pop()
 {
@@ -56,7 +52,6 @@ double Stack::pop()
 	top = top->next;
 	return result;
 }
-
 
 int Stack::size()
 {
@@ -70,7 +65,6 @@ int Stack::size()
 	return size;
 }
 
-
 int calculate_size(Block* pointer)
 {
 	if (pointer == nullptr)
@@ -78,12 +72,10 @@ int calculate_size(Block* pointer)
 	return 1 + calculate_size(pointer->next);
 }
 
-
 int Stack::size_recursive()
 {
 	return (calculate_size(top));
 }
-
 
 double Stack::sum()
 {
@@ -97,14 +89,12 @@ double Stack::sum()
 	return sum;
 }
 
-
 double calculate_sum(Block* pointer)
 {
 	if (pointer == nullptr)
 		return 0;
 	return pointer->number + calculate_sum(pointer->next);
 }
-
 
 double Stack::sum_recursive()
 {
