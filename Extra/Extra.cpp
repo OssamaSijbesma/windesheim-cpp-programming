@@ -13,16 +13,16 @@ int main()
     std::cout << "Hello World!\n";
 
     Stack<int> stack;
-    stack.PushBack(1);
-    stack.PushBack(2);
-    stack.PushBack(3);
-    stack.PushBack(4);
-    stack.PushBack(5);
-    stack.PushBack(6);
-    stack.PushBack(7);
-    stack.PushBack(8);
+    stack.Push(1);
+    stack.Push(2);
+    stack.Push(3);
+    stack.Push(4);
+    stack.Push(5);
+    stack.Push(6);
+    stack.Push(7);
+    stack.Push(8);
 
-    cout << stack.PopBack() << endl;
+    cout << stack.Pop() << endl;
     stack.Traverse();
 
     LinkedStack<char> stack2;

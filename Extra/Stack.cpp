@@ -20,7 +20,7 @@ Stack<T>::~Stack()
 }
 
 template<typename T>
-T Stack<T>::Back()
+T Stack<T>::Peek()
 {
 	if (size == 0)
 		return T();
@@ -29,7 +29,7 @@ T Stack<T>::Back()
 }
 
 template<typename T>
-T Stack<T>::PopBack()
+T Stack<T>::Pop()
 {
 	if (size == 0)
 		return T();
@@ -38,7 +38,7 @@ T Stack<T>::PopBack()
 }
 
 template<typename T>
-void Stack<T>::PushBack(T element)
+void Stack<T>::Push(T element)
 {
 	if (size == max)
 		Resize();

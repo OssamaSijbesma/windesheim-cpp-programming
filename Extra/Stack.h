@@ -12,9 +12,9 @@ class Stack
 public:
 	Stack();
 	~Stack();
-	T Back();
-	T PopBack();
-	void PushBack(T element);
+	T Peek();
+	T Pop();
+	void Push(T element);
 	void Empty();
 	void Traverse();
 	int Size();
