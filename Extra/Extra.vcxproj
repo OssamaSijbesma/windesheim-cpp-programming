@@ -148,10 +148,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Extra.cpp" />
+    <ClCompile Include="IO.cpp" />
     <ClCompile Include="LinkedStack.cpp" />
     <ClCompile Include="Stack.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="IO.h" />
     <ClInclude Include="LinkedStack.h" />
     <ClInclude Include="Stack.h" />
   </ItemGroup>

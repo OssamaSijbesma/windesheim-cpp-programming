@@ -5,6 +5,7 @@
 
 #include "stack.h"
 #include "LinkedStack.h"
+#include "IO.h"
 
 using namespace std;
 
@@ -42,5 +43,21 @@ int main()
     stack2.Push('i');
     stack2.Push('j');
     stack2.Traverse();
+
+    IO::WriteTextFile("ding.txt");
+    IO::ReadTextFile("ding.txt");
+
+    Person* persons = new Person[4];
+    persons[0].name = "Jaap";
+    persons[0].age = 15;
+    persons[1].name = "Hans";
+    persons[1].age = 14;
+    persons[2].name = "Jorn";
+    persons[2].age = 23;
+    persons[3].name = "Walter";
+    persons[3].age = 43;
+
+    IO::WriteBinaryFile("Personen.dat", persons, 4);
+    IO::ReadBinaryFile("Personen.dat");
 
 }
