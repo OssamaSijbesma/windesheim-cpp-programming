@@ -69,4 +69,3 @@ void IO::ReadBinaryFile(string filename)
 	else
 		cout << "Can't open the input file." << endl;
 }
-

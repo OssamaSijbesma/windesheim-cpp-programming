@@ -6,6 +6,7 @@
 #include "stack.h"
 #include "LinkedStack.h"
 #include "IO.h"
+#include "World.h"
 
 using namespace std;
 
@@ -60,4 +61,6 @@ int main()
     IO::WriteBinaryFile("Personen.dat", persons, 4);
     IO::ReadBinaryFile("Personen.dat");
 
+    World world;
+    world.DisplayMap();
 }

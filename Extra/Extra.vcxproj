@@ -151,11 +151,13 @@
     <ClCompile Include="IO.cpp" />
     <ClCompile Include="LinkedStack.cpp" />
     <ClCompile Include="Stack.cpp" />
+    <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IO.h" />
     <ClInclude Include="LinkedStack.h" />
     <ClInclude Include="Stack.h" />
+    <ClInclude Include="World.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
