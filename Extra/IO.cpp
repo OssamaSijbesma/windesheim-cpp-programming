@@ -1,5 +1,4 @@
 #include "IO.h"
-#include "IO.h"
 
 void IO::WriteTextFile(string filename)
 {
