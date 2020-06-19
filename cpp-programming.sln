@@ -39,7 +39,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lecture08_answers", "Lectur
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Extra", "Extra\Extra.vcxproj", "{C8004339-A67D-4CEE-99CD-FED3FC0EA018}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Exam", "..\..\..\..\Desktop\Exam\Exam.vcxproj", "{34409E28-7024-492D-8463-4861A87D1038}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Exam", "Exam\Exam.vcxproj", "{34409E28-7024-492D-8463-4861A87D1038}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
